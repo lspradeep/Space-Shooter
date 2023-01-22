@@ -346,18 +346,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2707841563938172466, guid: e5e31baa4d8964c038c7af10b4fb9312, type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -2707841563938172466, guid: e5e31baa4d8964c038c7af10b4fb9312, type: 3}
-      propertyPath: lifetime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -2707841563938172466, guid: e5e31baa4d8964c038c7af10b4fb9312, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 3814404050281879926, guid: 6be82ba17e63d42e482e98b077b484b5, type: 3}
     - target: {fileID: 6079386604010099354, guid: e5e31baa4d8964c038c7af10b4fb9312, type: 3}
       propertyPath: m_Name
       value: Player

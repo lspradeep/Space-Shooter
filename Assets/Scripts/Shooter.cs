@@ -7,13 +7,18 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float speed = 10f;
     [SerializeField] float lifetime = 5f;
-    public bool isFiring;
+    [SerializeField] float fireingRate = 0.2f;
+    [HideInInspector] public bool isFiring;
     private Coroutine shootCoroutine;
+    [SerializeField] bool isAI = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if (isAI)
+        {
+            isFiring = true;
+        }
     }
 
     // Update is called once per frame
@@ -41,7 +46,7 @@ public class Shooter : MonoBehaviour
                 rigidbody2D.velocity = transform.up * speed;
             }
             Destroy(bullet, lifetime);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(fireingRate);
         }
     }
 }

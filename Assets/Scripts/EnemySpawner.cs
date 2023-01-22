@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
                 currentWave = waveConfigs[k];
                 for (int i = 0; i < currentWave.getEnemiesCount(); i++)
                 {
-                    Instantiate(currentWave.getEnemiesAt(i), currentWave.getStartPoint().position, Quaternion.identity, transform);
+                    Instantiate(currentWave.getEnemiesAt(i), currentWave.getStartPoint().position, Quaternion.Euler(0,0,180), transform);
                     yield return new WaitForSecondsRealtime(0.5f);
                 }
                 yield return new WaitForSecondsRealtime(0.5f);
